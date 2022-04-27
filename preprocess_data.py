@@ -51,8 +51,6 @@ def main():
 
     os.makedirs(os.path.dirname(config['preprocess_train']),exist_ok=True)    
 
-
-
     val(config)
     test(config)
     train(config)
@@ -238,7 +236,6 @@ def to_int16(data):
     return data
 
 
-
 def modify(config, data_loader, save):
     t = time.time()
     store = data_loader.dataset.split
@@ -262,6 +259,7 @@ def modify(config, data_loader, save):
     pickle.dump(store, f, protocol=pickle.HIGHEST_PROTOCOL)
     f.close()
 
+
 class PreprocessDataset():
     def __init__(self, split, config, train=True):
         self.split = split
@@ -280,8 +278,6 @@ class PreprocessDataset():
 
     def __len__(self):
         return len(self.split)
-
-
 
 
 def preprocess(graph, cross_dist, cross_angle=None):
@@ -390,7 +386,6 @@ def preprocess(graph, cross_dist, cross_angle=None):
     out['right'] = right
     out['idx'] = graph['idx']
     return out
-
 
 
 def to_long(data):

@@ -1,0 +1,17 @@
+name: lanegcn
+channels:
+- defaults
+- conda-forge
+- pytorch
+dependencies:
+- python=3.8
+- pytorch=1.5.1
+- torchvision
+- cudatoolkit=10.2
+- scikit-image
+- IPython
+- tqdm
+- ipdb
+- pip
+- pip:
+    - C:\Users\bey1abt\PycharmProjects\argoverse-api
